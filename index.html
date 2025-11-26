@@ -136,14 +136,14 @@
 
   <!-- =================== SLIDER D'IMAGES PAYSAGE =================== -->
   <section class="bg-gray-100">
-    <div class="w-full py-3 sm:py-4">
+    <div class="w-full py-0 sm:py-0">
       <div class="relative overflow-hidden shadow-md bg-gray-200">
         <!-- Piste du slider -->
         <div id="hero-slider" class="flex transition-transform duration-700 ease-out">
           <!-- Slide 1 -->
           <div class="min-w-full">
             <img
-              src="./slider-1.png"
+              src="./slider-5.png"
               alt="Hôtels du Sud-Comoé"
               class="h-44 w-full object-cover sm:h-56 md:h-72 lg:h-80"
             />
@@ -152,7 +152,7 @@
           <!-- Slide 2 -->
           <div class="min-w-full">
             <img
-              src="./slider-1.png"
+              src="./slider-6.png"
               alt="Restaurants du Sud-Comoé"
               class="h-44 w-full object-cover sm:h-56 md:h-72 lg:h-80"
             />
@@ -161,7 +161,7 @@
           <!-- Slide 3 -->
           <div class="min-w-full">
             <img
-              src="./slider-1.png"
+              src="./slider-3.png"
               alt="Sites touristiques du Sud-Comoé"
               class="h-44 w-full object-cover sm:h-56 md:h-72 lg:h-80"
             />
@@ -367,19 +367,112 @@
     </div>
   </section>
 
-  <!-- =================== PIED DE PAGE =================== -->
-  <footer class="bg-gray-900 py-5 text-gray-400 text-[11px] sm:text-xs">
-    <div class="max-w-6xl mx-auto flex flex-col gap-2 px-4 sm:flex-row sm:items-center sm:justify-between">
-      <div class="text-center sm:text-left">
-        &copy; <span id="year"></span> CCI-SUD COMOE – Tous droits réservés.
+    <!-- =================== PIED DE PAGE ===================
+       Footer institutionnel / Chambre de Commerce
+       - Colonne 1 : identité + mission
+       - Colonne 2 : navigation principale
+       - Colonne 3 : informations pratiques
+       - Colonne 4 : contact & réseaux
+  ======================================================= -->
+   <footer class="bg-gray-900 text-gray-300 pt-12 pb-5 mt-8">
+    <div class="max-w-6xl mx-auto px-4 space-y-10">
+
+      <div class="grid gap-10 md:grid-cols-4">
+
+        <!-- COLONNE 1 -->
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-xs font-bold">
+              CCI
+            </span>
+            <div class="text-base">
+              <div class="font-semibold text-white">CCI-SUD COMOE</div>
+              <div class="text-gray-400 text-sm">Délégation Régionale</div>
+            </div>
+          </div>
+          <p class="text-[15px] leading-relaxed text-gray-400">
+            Plateforme officielle de l’Annuaire Numérique des
+            <span class="text-gray-200 font-medium">Hôtels &amp; Restaurants du Sud-Comoé</span>,
+            pour valoriser les acteurs du tourisme et faciliter la mise en relation.
+          </p>
+        </div>
+
+        <!-- COLONNE 2 -->
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">Navigation</h3>
+          <ul class="space-y-3 text-[15px]">
+            <li><a href="index.html" class="hover:text-red-400 transition">Accueil</a></li>
+            <li><a href="annuaire-hotels.html" class="hover:text-red-400 transition">Annuaire des hôtels</a></li>
+            <li><a href="annuaire-restaurants.html" class="hover:text-red-400 transition">Annuaire des restaurants</a></li>
+            <li><a href="agenda.html" class="hover:text-red-400 transition">Agenda des événements</a></li>
+            <li><a href="bon-plan.html" class="hover:text-red-400 transition">Bons plans &amp; offres</a></li>
+            <li><a href="contact.html" class="hover:text-red-400 transition">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- COLONNE 3 -->
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">Informations pratiques</h3>
+          <ul class="space-y-3 text-[15px] text-gray-400">
+            <li>
+              📍 <span class="font-medium text-gray-200">Sud-Comoé, Côte d’Ivoire</span><br>
+              <span class="block pl-6">
+                Délégation Régionale de la Chambre de Commerce et d’Industrie
+              </span>
+            </li>
+            <li>
+              🕒 <span class="font-medium text-gray-200">Horaires d’ouverture</span><br>
+              <span class="block pl-6">
+                Lundi – Vendredi : 8h00 – 17h00
+              </span>
+            </li>
+            <li>
+              ℹ️ <span class="font-medium text-gray-200">Services :</span><br>
+              <span class="block pl-6">
+                Appui aux entreprises, information économique, promotion du tourisme.
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- COLONNE 4 -->
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">Contact &amp; suivi</h3>
+          <ul class="space-y-3 text-[15px] text-gray-400 mb-5">
+            <li>☎ Téléphone : <span class="text-gray-200 font-medium">(+225) XX XX XX XX</span></li>
+            <li>✉ Email : <span class="text-gray-200 font-medium">contact@cci-sud-comoe.ci</span></li>
+          </ul>
+
+          <p class="text-[15px] text-gray-400 mb-3">
+            Suivez l’actualité de la CCI-SUD COMOE :
+          </p>
+          <div class="flex items-center gap-3">
+            <a href="#" class="inline-flex h-8 px-4 items-center justify-center rounded-full bg-gray-800 text-[13px] font-semibold hover:bg-red-600 hover:text-white transition">
+              Facebook
+            </a>
+            <a href="#" class="inline-flex h-8 px-4 items-center justify-center rounded-full bg-gray-800 text-[13px] font-semibold hover:bg-red-600 hover:text-white transition">
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
       </div>
-      <div class="text-center sm:text-right">
-        <span class="opacity-80">
-          Projet : Annuaire Numérique des Hôtels &amp; Restaurants du Sud-Comoé
-        </span>
+
+      <!-- BAS DE PAGE -->
+      <div class="border-t border-gray-800 pt-4 flex flex-col gap-2 text-[13px] sm:flex-row sm:items-center sm:justify-between">
+        <div class="text-center sm:text-left">
+          &copy; <span id="year"></span> CCI-SUD COMOE – Tous droits réservés.
+        </div>
+        <div class="text-center sm:text-right text-gray-400">
+          <span class="text-gray-200">Annuaire Numérique des Hôtels &amp; Restaurants du Sud-Comoé</span>
+        </div>
       </div>
+
     </div>
   </footer>
+
+  <!-- =============== FIN DU PIED DE PAGE ================== -->
+
 
   <!-- =================== SCRIPTS =================== -->
   <script>
