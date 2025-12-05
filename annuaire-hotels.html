@@ -1,125 +1,124 @@
 <!--
-  FICHIER : annuaire-hotels.html
-  OBJET   : Annuaire des hôtels du Sud-Comoé
-  STYLE   : Tailwind CSS – même thème que la page d’accueil
+  FICHIER : index.html
+  OBJET  : Page d’accueil de l’Annuaire Numérique des Hôtels & Restaurants du Sud-Comoé
+  VERSION : Tailwind CSS (sans Bootstrap) – Thème Rouge / Blanc / Gris
+  NOTE   : Version optimisée pour le mobile (meilleure lisibilité, pas de scroll horizontal,
+           boutons plus confortables, textes centrés sur petit écran).
 -->
 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Annuaire des hôtels - Sud-Comoé</title>
+  <title>Annuaire Hôtels & Restaurants - Sud-Comoé</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Tailwind CSS (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Ton style perso (optionnel) -->
+  <!-- Ton style perso (optionnel, pour compléments) -->
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body class="bg-gradient-to-b from-gray-50 via-white to-gray-100 text-gray-900 antialiased overflow-x-hidden">
+   <!-- bg-gradient-to-b ... : léger dégradé vertical
+       via-white : centre très clair
+       overflow-x-hidden : déjà là, évite le scroll horizontal -->
+  <!-- overflow-x-hidden : évite le scroll horizontal sur mobile -->
 
-  <!-- =================== HEADER / NAVBAR =================== -->
   <header>
-    <nav class="bg-red-900/95 backdrop-blur border-b border-red-800 text-white shadow-lg sticky top-0 z-40">
-      <div class="max-w-6xl mx-auto px-4">
-        <div class="flex items-center justify-between h-14 sm:h-16">
-          <!-- Logo + titre -->
-          <a href="index.html" class="flex items-center gap-2 font-semibold tracking-wide text-sm sm:text-base hover:opacity-90 transition">
-            <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-600 text-xs font-bold sm:text-sm">
-              CCI
-            </span>
-            <span class="whitespace-nowrap">CCI-SUD COMOE</span>
-          </a>
 
-          <!-- Bouton burger (mobile) -->
-          <button
-            id="nav-toggle"
-            class="inline-flex items-center justify-center rounded-md p-2 text-gray-200 hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-400 md:hidden"
-            aria-label="Ouvrir le menu"
-          >
-            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+        <!-- =================== NAVBAR PRINCIPALE =================== -->
+      <nav class="bg-red-900/95 backdrop-blur border-b border-red-800 text-white shadow-lg sticky top-0 z-40">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="flex items-center justify-between h-14 sm:h-16">
+            <!-- Logo + titre -->
+            <a href="index.html" class="flex items-center gap-2 font-semibold tracking-wide text-sm sm:text-base hover:opacity-90 transition">
 
-          <!-- Menu principal -->
-          <div
-            id="nav-menu"
-            class="hidden w-full flex-col gap-4 pt-4 pb-4 md:flex md:w-auto md:flex-row md:items-center md:gap-6 md:pt-0 md:pb-0"
-          >
-            <div class="flex flex-col gap-3 md:flex-row md:items-center md:gap-4 text-sm">
-              <!-- La CCI -->
-              <div class="relative">
-                <button
-                  class="inline-flex items-center gap-1 font-medium hover:text-red-200 transition"
-                  data-dropdown-toggle="dropdown-cci"
-                >
-                  <span>La CCI</span>
-                  <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-                  </svg>
-                </button>
-
-                <div
-                  id="dropdown-cci"
-                  class="absolute right-0 mt-2 w-52 rounded-md bg-red-900/95 text-sm shadow-lg ring-1 ring-black/5 hidden z-20"
-                >
-                  <div class="py-1">
-                    <a href="cci-mot-president.html" class="block px-4 py-2 hover:bg-red-800">Mot du Président</a>
-                    <a href="cci-missions.html" class="block px-4 py-2 hover:bg-red-800">Missions</a>
-                    <a href="cci-objectifs.html" class="block px-4 py-2 hover:bg-red-800">Objectifs</a>
-                    <a href="cci-membres.html" class="block px-4 py-2 hover:bg-red-800">Membres</a>
-                    <a href="cci-partenaires.html" class="block px-4 py-2 hover:bg-red-800">Partenaires</a>
-                    <a href="cci-bureau-executif.html" class="block px-4 py-2 hover:bg-red-800">Bureau Exécutif</a>
-                    <a href="activites.html" class="block px-4 py-2 hover:bg-red-800">Activités</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Annuaire -->
-              <div class="relative">
-                <button
-                  class="inline-flex items-center gap-1 font-medium hover:text-red-200 transition"
-                  data-dropdown-toggle="dropdown-annuaire"
-                >
-                  <span>Annuaire</span>
-                  <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-                  </svg>
-                </button>
-
-                <div
-                  id="dropdown-annuaire"
-                  class="absolute right-0 mt-2 w-56 rounded-md bg-red-900/95 text-sm shadow-lg ring-1 ring-black/5 hidden z-20"
-                >
-                  <div class="py-1">
-                    <a href="annuaire-hotels.html" class="block px-4 py-2 hover:bg-red-800">Hôtels</a>
-                    <a href="annuaire-restaurants.html" class="block px-4 py-2 hover:bg-red-800">Restaurants</a>
-                    <a href="annuaire-boites.html" class="block px-4 py-2 hover:bg-red-800">Boîtes de nuit</a>
-                    <a href="annuaire-espaces-balneaires.html" class="block px-4 py-2 hover:bg-red-800">Espaces balnéaires</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Liens simples -->
-              <a href="agenda.html" class="font-medium hover:text-red-200 transition">Agenda</a>
-              <a href="bon-plan.html" class="font-medium hover:text-red-200 transition">Bon Plan</a>
-              <a href="contact.html" class="font-medium hover:text-red-200 transition">Contact</a>
-            </div>
-
-            <!-- Espace membre -->
-            <a
-              href="espace-membre.html"
-              class="inline-flex items-center justify-center rounded-full border border-red-300 px-4 py-2 text-sm font-semibold text-red-100 hover:bg-red-300 hover:text-red-900 transition mt-2 md:mt-0"
-            >
-              Espace membre
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-600 text-xs font-bold sm:text-sm">
+                CCI
+              </span>
+              <span class="whitespace-nowrap">CCI-SUD COMOE</span>
             </a>
+
+            <!-- Bouton burger (mobile) -->
+            <button
+              id="nav-toggle"
+              class="inline-flex items-center justify-center rounded-md p-2 text-gray-200 hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-400 md:hidden"
+              aria-label="Ouvrir le menu"
+            >
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+
+            <!-- Liens du menu -->
+            <div
+              id="nav-menu"
+              class="hidden w-full flex-col gap-4 pt-4 pb-4 md:flex md:w-auto md:flex-row md:items-center md:gap-6 md:pt-0 md:pb-0"
+            >
+              <div class="flex flex-col gap-3 md:flex-row md:items-center md:gap-4 text-sm">
+                <!-- Rubrique Accueil -->
+                <div class="relative">
+                   <span class="inline-flex items-center gap-1 font-medium hover:text-red-200 transition"> <a href="index.html"> Accueil </a> </span>
+                    
+
+               
+                </div>
+
+                <!-- Annuaire -->
+                <div class="relative">
+                  <button
+                    class="inline-flex items-center gap-1 font-medium hover:text-red-200 transition"
+                    data-dropdown-toggle="dropdown-annuaire"
+                  >
+                    <span>Annuaire</span>
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+                    </svg>
+                  </button>
+
+                  <!-- Menu déroulant -->
+                  <div
+                    id="dropdown-annuaire"
+                    class="absolute right-0 mt-2 w-56 rounded-md bg-red-900/95 text-sm shadow-lg ring-1 ring-black/5 hidden z-20"
+                  >
+                    <div class="py-1">
+                      <a href="annuaire-hotels.html" class="block px-4 py-2 hover:bg-red-800">Hôtels</a>
+                      <a href="annuaire-restaurants.html" class="block px-4 py-2 hover:bg-red-800">Restaurants</a>
+                      <a href="annuaire-boites.html" class="block px-4 py-2 hover:bg-red-800">Boîtes de nuit</a>
+                      <a href="annuaire-espaces-balneaires.html" class="block px-4 py-2 hover:bg-red-800">Espaces balnéaires</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Agenda -->
+                <a href="agenda.html" class="font-medium hover:text-red-200 transition">
+                  Agenda
+                </a>
+
+                <!-- Bon plan -->
+                <a href="bon-plan.html" class="font-medium hover:text-red-200 transition">
+                  Bon Plan
+                </a>
+
+                <!-- Contact -->
+                <a href="contact.html" class="font-medium hover:text-red-200 transition">
+                  Contact
+                </a>
+              </div>
+
+              <!-- Espace membre -->
+              <a
+                href="espace-membre.html"
+                class="inline-flex items-center justify-center rounded-full border border-red-300 px-4 py-2 text-sm font-semibold text-red-100 hover:bg-red-800 hover:text-white transition mt-2 md:mt-0"
+              >
+                Espace membre
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+
   </header>
 
   <!-- =================== CONTENU PRINCIPAL =================== -->

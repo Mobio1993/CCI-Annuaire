@@ -57,33 +57,12 @@
               class="hidden w-full flex-col gap-4 pt-4 pb-4 md:flex md:w-auto md:flex-row md:items-center md:gap-6 md:pt-0 md:pb-0"
             >
               <div class="flex flex-col gap-3 md:flex-row md:items-center md:gap-4 text-sm">
-                <!-- Rubrique CCI -->
+                <!-- Rubrique Accueil -->
                 <div class="relative">
-                  <button
-                    class="inline-flex items-center gap-1 font-medium hover:text-red-200 transition"
-                    data-dropdown-toggle="dropdown-cci"
-                  >
-                    <span>La CCI</span>
-                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-                    </svg>
-                  </button>
+                   <span class="inline-flex items-center gap-1 font-medium hover:text-red-200 transition"> <a href="index.html"> Accueil </a> </span>
+                    
 
-                  <!-- Menu déroulant -->
-                  <div
-                    id="dropdown-cci"
-                    class="absolute right-0 mt-2 w-52 rounded-md bg-red-900/95 text-sm shadow-lg ring-1 ring-black/5 hidden z-20"
-                  >
-                    <div class="py-1">
-                      <a href="cci-mot-president.html" class="block px-4 py-2 hover:bg-red-800">Mot du Président</a>
-                      <a href="cci-missions.html" class="block px-4 py-2 hover:bg-red-800">Missions</a>
-                      <a href="cci-objectifs.html" class="block px-4 py-2 hover:bg-red-800">Objectifs</a>
-                      <a href="cci-membres.html" class="block px-4 py-2 hover:bg-red-800">Membres</a>
-                      <a href="cci-partenaires.html" class="block px-4 py-2 hover:bg-red-800">Partenaires</a>
-                      <a href="cci-bureau-executif.html" class="block px-4 py-2 hover:bg-red-800">Bureau Exécutif</a>
-                      <a href="activites.html" class="block px-4 py-2 hover:bg-red-800">Activités</a>
-                    </div>
-                  </div>
+               
                 </div>
 
                 <!-- Annuaire -->
@@ -139,10 +118,9 @@
           </div>
         </div>
       </nav>
+</header>
 
-  </header>
-
-  <!-- =================== SLIDER D'IMAGES PAYSAGE =================== -->
+      <!-- =================== SLIDER D'IMAGES PAYSAGE =================== -->
     <section class="bg-gray-100 py-5">
     <!-- Wrapper centré -->
     <div class="max-w-7xl mx-auto py-0 sm:py-0">
@@ -197,203 +175,305 @@
       </div>
     </div>
   </section>
-
-
-  <!-- =================== SECTION HERO / ACCUEIL =================== -->
-  <header class="hero-africa border-b bg-gradient-to-b from-white to-gray-100/80 py-8 sm:py-10">
-
+  
+  <!-- =================== SECTION HERO / PRÉSENTATION CCI =================== -->
+  <header class="border-b bg-gradient-to-b from-white to-gray-100/80 py-8 sm:py-10">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center md:text-left max-w-xl mx-auto md:mx-0 bg-white/70 backdrop-blur-sm rounded-2xl p-5 sm:p-6 shadow-sm">
-        <!-- Texte de présentation -->
-        <div class="text-center md:text-left max-w-xl mx-auto md:mx-0">
-          <h1 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight text-red-900 mb-3 sm:mb-4 leading-snug">
-            Annuaire Numérique des Hôtels &amp; Restaurants du Sud-Comoé
-          </h1>
+      <div class="grid gap-6 md:grid-cols-2 md:items-center">
 
-          <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
-            Une plateforme portée par la Délégation Régionale de la Chambre de Commerce et d’Industrie
-            du Sud-Comoé pour
-            <strong class="font-semibold text-red-700">faire connaître les acteurs du tourisme</strong>,
-            <strong class="font-semibold text-red-700">promouvoir les établissements</strong>
-            et <strong class="font-semibold text-red-700">faciliter la mise en relation</strong>.
+        <!-- Bloc texte -->
+        <div class="max-w-xl mx-auto md:mx-0 bg-white/80 backdrop-blur-sm rounded-2xl p-5 sm:p-6 shadow-sm">
+          <p class="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-red-700 mb-2">
+            Délégation Régionale – Sud-Comoé
+          </p>
+          <h1 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight text-red-900 mb-3 leading-snug">
+            Chambre de Commerce et d’Industrie de Côte d’Ivoire<br>
+            <span class="text-gray-900">Délégation Régionale du Sud-Comoé</span>
+          </h1>
+          <p class="text-sm sm:text-base text-gray-700 leading-relaxed mb-4">
+            La Délégation Régionale du Sud-Comoé accompagne les acteurs économiques
+            de la région pour <span class="font-semibold text-red-700">structurer l’écosystème</span>,
+            <span class="font-semibold text-red-700">professionnaliser les opérateurs</span> et
+            <span class="font-semibold text-red-700">promouvoir l’innovation</span>.
           </p>
 
-          <!-- Boutons : pleine largeur sur mobile, inline à partir de sm -->
-          <div class="mt-5 flex flex-col sm:flex-row sm:flex-wrap gap-3 justify-center md:justify-start">
+          <!-- Boutons -->
+          <div class="mt-4 flex flex-col sm:flex-row sm:flex-wrap gap-3">
             <a
-              href="annuaire-hotels.html"
+              href="#missions"
               class="inline-flex items-center justify-center rounded-full bg-red-600 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-red-400/40 hover:bg-red-700 transition w-full sm:w-auto"
             >
-              Découvrir les hôtels
+              Découvrir nos missions
             </a>
             <a
-              href="annuaire-restaurants.html"
+              href="#annuaire"
               class="inline-flex items-center justify-center rounded-full border border-red-600 px-6 py-2.5 text-sm font-semibold text-red-700 hover:bg-red-50 transition w-full sm:w-auto"
             >
-              Voir les restaurants
+              Accéder à l’annuaire
             </a>
           </div>
         </div>
+
+        <!-- Visuel (tu peux mettre une photo de la région ou du bureau) -->
+        <div class="hidden md:block">
+          <div class="h-64 lg:h-72 rounded-3xl bg-gray-200 overflow-hidden shadow-lg">
+            <img
+              src="cci.jpg"
+              alt="Région du Sud-Comoé – Côte d’Ivoire"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
       </div>
     </div>
   </header>
 
-  <main>
-    
-      <!-- =================== SECTION : MISE EN AVANT DE L’ANNUAIRE =================== -->
-      <section class="py-8 sm:py-10">
-        <div class="max-w-6xl mx-auto px-4">
-          <h2 class="text-xl sm:text-2xl font-semibold text-gray-900 mb-5 sm:mb-6 text-center sm:text-left">
-            L’annuaire en un coup d’œil
-          </h2>
+  <!-- =================== CONTENU PRINCIPAL =================== -->
+  <main class="max-w-6xl mx-auto px-4 py-8 sm:py-10 space-y-10">
 
-          <div class="grid gap-4 sm:gap-6 md:grid-cols-4">
-            <!-- Carte Hôtels -->
-            <article class="group rounded-2xl bg-gradient-to-b from-white to-gray-50 p-4 sm:p-5 shadow-sm ring-1 ring-gray-200 hover:-translate-y-1.5 hover:shadow-xl hover:ring-red-200 transition">
-              <h3 class="mb-2 text-base sm:text-lg font-semibold text-gray-900 flex items-center gap-2">
-                <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-700 text-xl">
-                  🏨
-                </span>
-                <span>Hôtels</span>
-              </h3>
-              <p class="mb-3 text-xs sm:text-sm text-gray-600">
-                Retrouvez les établissements hôteliers du Sud-Comoé,
-                leurs coordonnées et leurs services.
-              </p>
-              <a
-                href="annuaire-hotels.html"
-                class="inline-flex items-center text-xs sm:text-sm font-semibold text-red-700 group-hover:text-red-800"
-              >
-                Voir les hôtels
-                <span class="ml-1 text-xs">→</span>
-              </a>
-            </article>
+    <!-- ===== SECTION : LA RÉGION DU SUD-COMOÉ ===== -->
+    <section id="region" class="space-y-4">
+      <header>
+        <h2 class="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900">
+          La région du Sud-Comoé
+        </h2>
+      </header>
+      <div class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-200 p-5 sm:p-6 space-y-3">
+        <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
+          Le Sud-Comoé est une région stratégique de la Côte d’Ivoire,
+          à fort potentiel économique et touristique. Elle regroupe notamment les localités de
+          <span class="font-medium">Grand-Bassam, Bonoua, Adiaké, Aboisso, Assinie, Ayamé, Maféré, Tiapoum</span>, etc.
+        </p>
+        <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
+          La Délégation Régionale de la CCI-CI y joue un rôle de proximité auprès des
+          commerçants, hôteliers, restaurateurs, entrepreneurs et porteurs de projets,
+          afin de renforcer la compétitivité du territoire.
+        </p>
+      </div>
+    </section>
 
-            <!-- Carte Restaurants -->
-            <article class="group rounded-2xl bg-gradient-to-b from-white to-gray-50 p-4 sm:p-5 shadow-sm ring-1 ring-gray-200 hover:-translate-y-1.5 hover:shadow-xl hover:ring-red-200 transition">
-              <h3 class="mb-2 text-base sm:text-lg font-semibold text-gray-900 flex items-center gap-2">
-                <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-700 text-xl">
-                  🍽️
-                </span>
-                <span>Restaurants</span>
-              </h3>
-              <p class="mb-3 text-xs sm:text-sm text-gray-600">
-                Une sélection de restaurants pour découvrir les saveurs de la région.
-              </p>
-              <a
-                href="annuaire-restaurants.html"
-                class="inline-flex items-center text-xs sm:text-sm font-semibold text-red-700 group-hover:text-red-800"
-              >
-                Voir les restaurants
-                <span class="ml-1 text-xs">→</span>
-              </a>
-            </article>
+    <!-- ===== SECTION : MISSIONS ===== -->
+    <section id="missions" class="space-y-4">
+      <header>
+        <h2 class="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900">
+          Nos missions principales
+        </h2>
+      </header>
 
-            <!-- Carte Boîtes de nuit -->
-            <article class="group rounded-2xl bg-gradient-to-b from-white to-gray-50 p-4 sm:p-5 shadow-sm ring-1 ring-gray-200 hover:-translate-y-1.5 hover:shadow-xl hover:ring-red-200 transition">
-              <h3 class="mb-2 text-base sm:text-lg font-semibold text-gray-900 flex items-center gap-2">
-                <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-700 text-xl">
-                  🎶
-                </span>
-                <span>Boîtes de nuit</span>
-              </h3>
-              <p class="mb-3 text-xs sm:text-sm text-gray-600">
-                Les meilleurs espaces festifs et nocturnes de la région.
-              </p>
-              <a
-                href="annuaire-boites.html"
-                class="inline-flex items-center text-xs sm:text-sm font-semibold text-red-700 group-hover:text-red-800"
-              >
-                Voir les boîtes
-                <span class="ml-1 text-xs">→</span>
-              </a>
-            </article>
+      <div class="grid gap-4 sm:gap-6 md:grid-cols-3">
+        <!-- Mission 1 -->
+        <article class="rounded-2xl bg-white p-4 sm:p-5 shadow-sm ring-1 ring-gray-200">
+          <h3 class="mb-2 text-base sm:text-lg font-semibold text-gray-900">
+            Structurer l’écosystème
+          </h3>
+          <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">
+            Identifier, recenser et organiser les acteurs économiques de la région
+            afin de mieux les représenter et de faciliter leur mise en relation.
+          </p>
+        </article>
 
-            <!-- Carte Espaces balnéaires -->
-            <article class="group rounded-2xl bg-gradient-to-b from-white to-gray-50 p-4 sm:p-5 shadow-sm ring-1 ring-gray-200 hover:-translate-y-1.5 hover:shadow-xl hover:ring-red-200 transition">
-              <h3 class="mb-2 text-base sm:text-lg font-semibold text-gray-900 flex items-center gap-2">
-                <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-700 text-xl">
-                  🌊
-                </span>
-                <span>Espaces balnéaires</span>
-              </h3>
-              <p class="mb-3 text-xs sm:text-sm text-gray-600">
-                Plages, lagunes, complexes balnéaires pour le tourisme et la détente.
-              </p>
-              <a
-                href="annuaire-espaces-balneaires.html"
-                class="inline-flex items-center text-xs sm:text-sm font-semibold text-red-700 group-hover:text-red-800"
-              >
-                Voir les espaces
-                <span class="ml-1 text-xs">→</span>
-              </a>
-            </article>
+        <!-- Mission 2 -->
+        <article class="rounded-2xl bg-white p-4 sm:p-5 shadow-sm ring-1 ring-gray-200">
+          <h3 class="mb-2 text-base sm:text-lg font-semibold text-gray-900">
+            Professionnaliser les opérateurs
+          </h3>
+          <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">
+            Accompagner les entreprises dans la formalisation, la gestion,
+            la qualité de service et l’obtention de la carte professionnelle.
+          </p>
+        </article>
+
+        <!-- Mission 3 -->
+        <article class="rounded-2xl bg-white p-4 sm:p-5 shadow-sm ring-1 ring-gray-200">
+          <h3 class="mb-2 text-base sm:text-lg font-semibold text-gray-900">
+            Promouvoir l’innovation
+          </h3>
+          <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">
+            Encourager la modernisation des pratiques, la digitalisation,
+            les projets innovants et la valorisation de l’offre touristique et commerciale.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== SECTION : OBJECTIFS & VISION ===== -->
+    <section id="objectifs" class="grid gap-6 md:grid-cols-2">
+      <!-- Objectifs -->
+      <div class="space-y-3 bg-white rounded-2xl shadow-sm ring-1 ring-gray-200 p-5 sm:p-6">
+        <h2 class="text-lg sm:text-xl font-semibold text-gray-900">
+          Objectifs stratégiques
+        </h2>
+        <ul class="space-y-2 text-sm sm:text-base text-gray-700">
+          <li>
+            • <span class="font-medium">Professionnaliser les acteurs économiques</span> du Sud-Comoé.
+          </li>
+          <li>
+            • Améliorer les <span class="font-medium">performances économiques</span> des entreprises.
+          </li>
+          <li>
+            • Dynamiser le <span class="font-medium">tissu commercial et touristique</span> par des actions
+            de promotion, salons, forums et rencontres B2B.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Vision -->
+      <div class="space-y-3 bg-white rounded-2xl shadow-sm ring-1 ring-gray-200 p-5 sm:p-6">
+        <h2 class="text-lg sm:text-xl font-semibold text-gray-900">
+          Vision
+        </h2>
+        <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
+          Faire du <span class="font-medium">Sud-Comoé</span> un <span class="font-semibold text-red-700">
+          modèle de professionnalisation et de performance économique</span> en Côte d’Ivoire,
+          grâce à une organisation moderne, une meilleure structuration des filières
+          et une montée en compétences des acteurs.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== SECTION : MOT DU PRÉSIDENT ===== -->
+    <section id="mot-president" class="space-y-4">
+      <header>
+        <h2 class="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900">
+          Mot du Président de la Délégation Régionale
+        </h2>
+      </header>
+
+      <article class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-200 p-5 sm:p-6 space-y-3">
+        <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
+          Le Président de la Délégation Régionale, <span class="font-medium">Sylla Bakary</span>,
+          réaffirme la volonté de doter le Sud-Comoé d’une organisation moderne, capable
+          d’accompagner efficacement les commerçants, entreprises et porteurs de projets.
+        </p>
+        <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
+          La carte professionnelle, la formation continue, la mise à niveau et
+          la digitalisation des acteurs économiques sont au cœur des priorités,
+          afin de renforcer la compétitivité de la région et de créer des opportunités durables.
+        </p>
+      </article>
+    </section>
+
+    <!-- ===== SECTION : ACCÈS RAPIDE À L’ANNUAIRE ===== -->
+    <section id="annuaire" class="space-y-6">
+      <header class="space-y-1">
+        <h2 class="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900">
+          L’annuaire en un coup d’œil
+        </h2>
+        <p class="text-sm sm:text-base text-gray-700">
+          Consultez les acteurs du tourisme et des loisirs du Sud-Comoé :
+          hôtels, restaurants, boîtes de nuit et espaces balnéaires.
+        </p>
+      </header>
+
+      <!-- Grille de cartes (reprend ton style actuel) -->
+      <div class="grid gap-4 sm:gap-6 md:grid-cols-4">
+
+        <!-- Hôtels -->
+        <article
+          class="group rounded-3xl bg-white p-5 sm:p-6 shadow-sm ring-1 ring-gray-200
+                 hover:shadow-lg hover:-translate-y-1 hover:ring-red-200 transition">
+          <div class="flex items-start gap-3 mb-3">
+            <span
+              class="inline-flex h-10 w-10 items-center justify-center rounded-full
+                     bg-red-50 text-red-600 text-xl">
+              🏨
+            </span>
+            <h3 class="text-base sm:text-lg font-semibold text-gray-900">Hôtels</h3>
           </div>
-        </div>
-      </section>
+          <p class="mb-3 text-xs sm:text-sm text-gray-600 leading-relaxed">
+            Retrouvez les établissements hôteliers du Sud-Comoé,
+            leurs coordonnées et leurs services.
+          </p>
+          <a
+            href="annuaire-hotels.html"
+            class="inline-flex items-center text-xs sm:text-sm font-semibold text-red-700 group-hover:text-red-800"
+          >
+            Voir les hôtels <span class="ml-1 text-xs">→</span>
+          </a>
+        </article>
 
-      <!-- =================== SECTION AGENDA & BON PLAN =================== -->
-      <section class="border-t bg-gradient-to-r from-gray-50 via-white to-gray-100 py-8 sm:py-10">
-        <div class="max-w-6xl mx-auto px-4">
-          <div class="grid gap-8 md:grid-cols-2">
-            <!-- Agenda -->
-            <div class="text-center md:text-left bg-white/80 rounded-2xl p-5 shadow-sm ring-1 ring-gray-100">
-              <h2 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2 flex items-center justify-center md:justify-start gap-2">
-                <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-700 text-lg">
-                  📅
-                </span>
-                <span>Agenda</span>
-              </h2>
-              <p class="text-xs sm:text-sm text-gray-700 mb-3">
-                Consultez les <strong>événements culturels</strong> et les
-                <strong>rendez-vous économiques</strong> du Sud-Comoé.
-              </p>
-              <a
-                href="agenda.html"
-                class="inline-flex items-center rounded-full border border-red-600 px-5 py-2 text-xs font-semibold text-red-700 hover:bg-red-50 transition w-full sm:w-auto justify-center"
-              >
-                Voir l’agenda
-              </a>
-            </div>
-
-            <!-- Bon plan -->
-            <div class="text-center md:text-left bg-white/80 rounded-2xl p-5 shadow-sm ring-1 ring-gray-100">
-              <h2 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2 flex items-center justify-center md:justify-start gap-2">
-                <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-700 text-lg">
-                  💡
-                </span>
-                <span>Bon plan</span>
-              </h2>
-              <p class="text-xs sm:text-sm text-gray-700 mb-3">
-                Les membres disposant d’un compte peuvent publier directement leurs
-                <strong>offres spéciales, promotions, annonces</strong>.
-              </p>
-              <a
-                href="bon-plan.html"
-                class="inline-flex items-center rounded-full border border-red-600 px-5 py-2 text-xs font-semibold text-red-700 hover:bg-red-50 transition w-full sm:w-auto justify-center"
-              >
-                Voir les bons plans
-              </a>
-            </div>
+        <!-- Restaurants -->
+        <article
+          class="group rounded-3xl bg-white p-5 sm:p-6 shadow-sm ring-1 ring-gray-200
+                 hover:shadow-lg hover:-translate-y-1 hover:ring-red-200 transition">
+          <div class="flex items-start gap-3 mb-3">
+            <span
+              class="inline-flex h-10 w-10 items-center justify-center rounded-full
+                     bg-red-50 text-red-600 text-xl">
+              🍽️
+            </span>
+            <h3 class="text-base sm:text-lg font-semibold text-gray-900">Restaurants</h3>
           </div>
-        </div>
-      </section>
+          <p class="mb-3 text-xs sm:text-sm text-gray-600 leading-relaxed">
+            Une sélection de restaurants pour découvrir les saveurs de la région.
+          </p>
+          <a
+            href="annuaire-restaurants.html"
+            class="inline-flex items-center text-xs sm:text-sm font-semibold text-red-700 group-hover:text-red-800"
+          >
+            Voir les restaurants <span class="ml-1 text-xs">→</span>
+          </a>
+        </article>
+
+        <!-- Boîtes de nuit -->
+        <article
+          class="group rounded-3xl bg-white p-5 sm:p-6 shadow-sm ring-1 ring-gray-200
+                 hover:shadow-lg hover:-translate-y-1 hover:ring-red-200 transition">
+          <div class="flex items-start gap-3 mb-3">
+            <span
+              class="inline-flex h-10 w-10 items-center justify-center rounded-full
+                     bg-red-50 text-red-600 text-xl">
+              🎶
+            </span>
+            <h3 class="text-base sm:text-lg font-semibold text-gray-900">Boîtes de nuit</h3>
+          </div>
+          <p class="mb-3 text-xs sm:text-sm text-gray-600 leading-relaxed">
+            Les meilleurs espaces festifs et nocturnes de la région.
+          </p>
+          <a
+            href="annuaire-boites.html"
+            class="inline-flex items-center text-xs sm:text-sm font-semibold text-red-700 group-hover:text-red-800"
+          >
+            Voir les boîtes <span class="ml-1 text-xs">→</span>
+          </a>
+        </article>
+
+        <!-- Espaces balnéaires -->
+        <article
+          class="group rounded-3xl bg-white p-5 sm:p-6 shadow-sm ring-1 ring-gray-200
+                 hover:shadow-lg hover:-translate-y-1 hover:ring-red-200 transition">
+          <div class="flex items-start gap-3 mb-3">
+            <span
+              class="inline-flex h-10 w-10 items-center justify-center rounded-full
+                     bg-red-50 text-red-600 text-xl">
+              🌊
+            </span>
+            <h3 class="text-base sm:text-lg font-semibold text-gray-900">Espaces balnéaires</h3>
+          </div>
+          <p class="mb-3 text-xs sm:text-sm text-gray-600 leading-relaxed">
+            Plages, lagunes, complexes balnéaires pour le tourisme et la détente.
+          </p>
+          <a
+            href="annuaire-espaces-balneaires.html"
+            class="inline-flex items-center text-xs sm:text-sm font-semibold text-red-700 group-hover:text-red-800"
+          >
+            Voir les espaces <span class="ml-1 text-xs">→</span>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
   </main>
 
-    <!-- =================== PIED DE PAGE ===================
-       Footer institutionnel / Chambre de Commerce
-       - Colonne 1 : identité + mission
-       - Colonne 2 : navigation principale
-       - Colonne 3 : informations pratiques
-       - Colonne 4 : contact & réseaux
-  ======================================================= -->
-   <footer class="bg-gray-900/95 text-gray-300 pt-12 pb-5 mt-8">
-
+<!-- =================== PIED DE PAGE =================== -->
+  <footer class="bg-gray-900/95 text-gray-300 pt-12 pb-5 mt-8">
     <div class="max-w-6xl mx-auto px-4 space-y-10">
 
+      <!-- 4 colonnes -->
       <div class="grid gap-10 md:grid-cols-4">
-
-        <!-- COLONNE 1 -->
+        <!-- Colonne 1 -->
         <div>
           <div class="flex items-center gap-2 mb-4">
             <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-xs font-bold">
@@ -411,7 +491,7 @@
           </p>
         </div>
 
-        <!-- COLONNE 2 -->
+        <!-- Colonne 2 -->
         <div>
           <h3 class="text-lg font-semibold text-white mb-4">Navigation</h3>
           <ul class="space-y-3 text-[15px]">
@@ -424,7 +504,7 @@
           </ul>
         </div>
 
-        <!-- COLONNE 3 -->
+        <!-- Colonne 3 -->
         <div>
           <h3 class="text-lg font-semibold text-white mb-4">Informations pratiques</h3>
           <ul class="space-y-3 text-[15px] text-gray-400">
@@ -449,7 +529,7 @@
           </ul>
         </div>
 
-        <!-- COLONNE 4 -->
+        <!-- Colonne 4 -->
         <div>
           <h3 class="text-lg font-semibold text-white mb-4">Contact &amp; suivi</h3>
           <ul class="space-y-3 text-[15px] text-gray-400 mb-5">
@@ -469,10 +549,9 @@
             </a>
           </div>
         </div>
-
       </div>
 
-      <!-- BAS DE PAGE -->
+      <!-- Bas de page -->
       <div class="border-t border-gray-800 pt-4 flex flex-col gap-2 text-[13px] sm:flex-row sm:items-center sm:justify-between">
         <div class="text-center sm:text-left">
           &copy; <span id="year"></span> CCI-SUD COMOE – Tous droits réservés.
@@ -485,23 +564,12 @@
     </div>
   </footer>
 
-  <!-- =============== FIN DU PIED DE PAGE ================== -->
-
-
   <!-- =================== SCRIPTS =================== -->
   <script>
-    // --------------------------------------------------------------------
-    // SCRIPT GLOBAL
-    // - Met à jour l'année du footer
-    // - Gère le menu burger (mobile)
-    // - Gère les menus déroulants (La CCI / Annuaire)
-    // - Gère le slider d'images en paysage (auto défilement + puces)
-    // --------------------------------------------------------------------
-
-    // Met automatiquement l’année courante dans le footer
+    // Met à jour l’année du footer
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Gestion du burger (menu mobile)
+    // Menu burger
     const navToggle = document.getElementById("nav-toggle");
     const navMenu = document.getElementById("nav-menu");
 
@@ -511,13 +579,12 @@
       });
     }
 
-    // Gestion des menus déroulants (La CCI / Annuaire)
+    // Menus déroulants (La CCI / Annuaire)
     const dropdownButtons = document.querySelectorAll("[data-dropdown-toggle]");
 
     dropdownButtons.forEach((btn) => {
       const menuId = btn.getAttribute("data-dropdown-toggle");
       const menu = document.getElementById(menuId);
-
       if (!menu) return;
 
       btn.addEventListener("click", (e) => {
@@ -526,7 +593,6 @@
         menu.classList.toggle("hidden");
       });
 
-      // Fermer en cliquant ailleurs
       document.addEventListener("click", (e) => {
         if (!menu.contains(e.target) && !btn.contains(e.target)) {
           menu.classList.add("hidden");
@@ -534,62 +600,8 @@
       });
     });
 
-    // ================== SLIDER D'IMAGES PAYSAGE ==================
-    const slider = document.getElementById("hero-slider");
-    const dots = document.querySelectorAll("[data-slider-dot]");
-    let currentSlide = 0;
-    let slideInterval;
-
-    function updateSlider(index) {
-      if (!slider) return;
-      const total = slider.children.length;
-      currentSlide = (index + total) % total; // boucle infinie
-      slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-      // Mise à jour des puces
-      dots.forEach((dot, i) => {
-        if (i === currentSlide) {
-          dot.classList.remove("bg-white/40");
-          dot.classList.add("bg-white/70");
-        } else {
-          dot.classList.remove("bg-white/70");
-          dot.classList.add("bg-white/40");
-        }
-      });
-    }
-
-    function startAutoSlide() {
-      if (!slider) return;
-      slideInterval = setInterval(() => {
-        updateSlider(currentSlide + 1);
-      }, 5000); // 5 secondes
-    }
-
-    function stopAutoSlide() {
-      if (slideInterval) clearInterval(slideInterval);
-    }
-
-    // Clic sur les puces
-    dots.forEach((dot) => {
-      dot.addEventListener("click", () => {
-        const index = parseInt(dot.getAttribute("data-slider-dot"), 10);
-        stopAutoSlide();
-        updateSlider(index);
-        startAutoSlide();
-      });
-    });
-
-    // Lancement initial
-    if (slider && slider.children.length > 1) {
-      updateSlider(0);
-      startAutoSlide();
-    }
-
-    // --------------------------------------------------------------------
-    // FIN DU SCRIPT GLOBAL
-    // - Le site est maintenant plus agréable sur mobile : pas de scroll
-    //   horizontal, textes lisibles, boutons larges, sections centrées.
-    // --------------------------------------------------------------------
+    // NOTE : pour l’instant, les filtres ne sont qu’interface.
+    // Tu pourras plus tard les connecter à une vraie base (JSON / API / base de données).
   </script>
 </body>
 </html>
