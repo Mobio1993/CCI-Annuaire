@@ -564,12 +564,19 @@
     </div>
   </footer>
 
-  <!-- =================== SCRIPTS =================== -->
-  <script>
-    // Met à jour l’année du footer
+ <script>
+    // --------------------------------------------------------------------
+    // SCRIPT GLOBAL
+    // - Met à jour l'année du footer
+    // - Gère le menu burger (mobile)
+    // - Gère les menus déroulants (La CCI / Annuaire)
+    // - Gère le slider d'images en paysage (auto défilement + puces)
+    // --------------------------------------------------------------------
+
+    // Met automatiquement l’année courante dans le footer
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Menu burger
+    // Gestion du burger (menu mobile)
     const navToggle = document.getElementById("nav-toggle");
     const navMenu = document.getElementById("nav-menu");
 
@@ -579,12 +586,13 @@
       });
     }
 
-    // Menus déroulants (La CCI / Annuaire)
+    // Gestion des menus déroulants (La CCI / Annuaire)
     const dropdownButtons = document.querySelectorAll("[data-dropdown-toggle]");
 
     dropdownButtons.forEach((btn) => {
       const menuId = btn.getAttribute("data-dropdown-toggle");
       const menu = document.getElementById(menuId);
+
       if (!menu) return;
 
       btn.addEventListener("click", (e) => {
@@ -593,6 +601,7 @@
         menu.classList.toggle("hidden");
       });
 
+      // Fermer en cliquant ailleurs
       document.addEventListener("click", (e) => {
         if (!menu.contains(e.target) && !btn.contains(e.target)) {
           menu.classList.add("hidden");
@@ -600,8 +609,62 @@
       });
     });
 
-    // NOTE : pour l’instant, les filtres ne sont qu’interface.
-    // Tu pourras plus tard les connecter à une vraie base (JSON / API / base de données).
+    // ================== SLIDER D'IMAGES PAYSAGE ==================
+    const slider = document.getElementById("hero-slider");
+    const dots = document.querySelectorAll("[data-slider-dot]");
+    let currentSlide = 0;
+    let slideInterval;
+
+    function updateSlider(index) {
+      if (!slider) return;
+      const total = slider.children.length;
+      currentSlide = (index + total) % total; // boucle infinie
+      slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+      // Mise à jour des puces
+      dots.forEach((dot, i) => {
+        if (i === currentSlide) {
+          dot.classList.remove("bg-white/40");
+          dot.classList.add("bg-white/70");
+        } else {
+          dot.classList.remove("bg-white/70");
+          dot.classList.add("bg-white/40");
+        }
+      });
+    }
+
+    function startAutoSlide() {
+      if (!slider) return;
+      slideInterval = setInterval(() => {
+        updateSlider(currentSlide + 1);
+      }, 5000); // 5 secondes
+    }
+
+    function stopAutoSlide() {
+      if (slideInterval) clearInterval(slideInterval);
+    }
+
+    // Clic sur les puces
+    dots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        const index = parseInt(dot.getAttribute("data-slider-dot"), 10);
+        stopAutoSlide();
+        updateSlider(index);
+        startAutoSlide();
+      });
+    });
+
+    // Lancement initial
+    if (slider && slider.children.length > 1) {
+      updateSlider(0);
+      startAutoSlide();
+    }
+
+    // --------------------------------------------------------------------
+    // FIN DU SCRIPT GLOBAL
+    // - Le site est maintenant plus agréable sur mobile : pas de scroll
+    //   horizontal, textes lisibles, boutons larges, sections centrées.
+    // --------------------------------------------------------------------
   </script>
 </body>
 </html>
