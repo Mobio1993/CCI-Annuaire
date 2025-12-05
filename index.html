@@ -19,127 +19,138 @@
   <!-- Ton style perso (optionnel, pour compléments) -->
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-gray-50 text-gray-900 antialiased overflow-x-hidden">
+<body class="bg-gradient-to-b from-gray-50 via-white to-gray-100 text-gray-900 antialiased overflow-x-hidden">
+   <!-- bg-gradient-to-b ... : léger dégradé vertical
+       via-white : centre très clair
+       overflow-x-hidden : déjà là, évite le scroll horizontal -->
   <!-- overflow-x-hidden : évite le scroll horizontal sur mobile -->
 
-  <!-- =================== NAVBAR PRINCIPALE =================== -->
-  <nav class="bg-red-900 text-white shadow">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex items-center justify-between h-14 sm:h-16">
-        <!-- Logo + titre -->
-        <a href="index.html" class="flex items-center gap-2 font-semibold tracking-wide text-sm sm:text-base">
-          <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-600 text-xs font-bold sm:text-sm">
-            CCI
-          </span>
-          <span class="whitespace-nowrap">CCI-SUD COMOE</span>
-        </a>
+  <header>
 
-        <!-- Bouton burger (mobile) -->
-        <button
-          id="nav-toggle"
-          class="inline-flex items-center justify-center rounded-md p-2 text-gray-200 hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-400 md:hidden"
-          aria-label="Ouvrir le menu"
-        >
-          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+        <!-- =================== NAVBAR PRINCIPALE =================== -->
+      <nav class="bg-red-900/95 backdrop-blur border-b border-red-800 text-white shadow-lg sticky top-0 z-40">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="flex items-center justify-between h-14 sm:h-16">
+            <!-- Logo + titre -->
+            <a href="index.html" class="flex items-center gap-2 font-semibold tracking-wide text-sm sm:text-base hover:opacity-90 transition">
 
-        <!-- Liens du menu -->
-        <div
-          id="nav-menu"
-          class="hidden w-full flex-col gap-4 pt-4 pb-4 md:flex md:w-auto md:flex-row md:items-center md:gap-6 md:pt-0 md:pb-0"
-        >
-          <div class="flex flex-col gap-3 md:flex-row md:items-center md:gap-4 text-sm">
-            <!-- Rubrique CCI -->
-            <div class="relative">
-              <button
-                class="inline-flex items-center gap-1 font-medium hover:text-red-200 transition"
-                data-dropdown-toggle="dropdown-cci"
-              >
-                <span>La CCI</span>
-                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-                </svg>
-              </button>
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-600 text-xs font-bold sm:text-sm">
+                CCI
+              </span>
+              <span class="whitespace-nowrap">CCI-SUD COMOE</span>
+            </a>
 
-              <!-- Menu déroulant -->
-              <div
-                id="dropdown-cci"
-                class="absolute right-0 mt-2 w-52 rounded-md bg-red-900/95 text-sm shadow-lg ring-1 ring-black/5 hidden z-20"
-              >
-                <div class="py-1">
-                  <a href="cci-mot-president.html" class="block px-4 py-2 hover:bg-red-800">Mot du Président</a>
-                  <a href="cci-missions.html" class="block px-4 py-2 hover:bg-red-800">Missions</a>
-                  <a href="cci-objectifs.html" class="block px-4 py-2 hover:bg-red-800">Objectifs</a>
-                  <a href="cci-membres.html" class="block px-4 py-2 hover:bg-red-800">Membres</a>
-                  <a href="cci-partenaires.html" class="block px-4 py-2 hover:bg-red-800">Partenaires</a>
-                  <a href="cci-bureau-executif.html" class="block px-4 py-2 hover:bg-red-800">Bureau Exécutif</a>
-                  <a href="activites.html" class="block px-4 py-2 hover:bg-red-800">Activités</a>
+            <!-- Bouton burger (mobile) -->
+            <button
+              id="nav-toggle"
+              class="inline-flex items-center justify-center rounded-md p-2 text-gray-200 hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-400 md:hidden"
+              aria-label="Ouvrir le menu"
+            >
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+
+            <!-- Liens du menu -->
+            <div
+              id="nav-menu"
+              class="hidden w-full flex-col gap-4 pt-4 pb-4 md:flex md:w-auto md:flex-row md:items-center md:gap-6 md:pt-0 md:pb-0"
+            >
+              <div class="flex flex-col gap-3 md:flex-row md:items-center md:gap-4 text-sm">
+                <!-- Rubrique CCI -->
+                <div class="relative">
+                  <button
+                    class="inline-flex items-center gap-1 font-medium hover:text-red-200 transition"
+                    data-dropdown-toggle="dropdown-cci"
+                  >
+                    <span>La CCI</span>
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+                    </svg>
+                  </button>
+
+                  <!-- Menu déroulant -->
+                  <div
+                    id="dropdown-cci"
+                    class="absolute right-0 mt-2 w-52 rounded-md bg-red-900/95 text-sm shadow-lg ring-1 ring-black/5 hidden z-20"
+                  >
+                    <div class="py-1">
+                      <a href="cci-mot-president.html" class="block px-4 py-2 hover:bg-red-800">Mot du Président</a>
+                      <a href="cci-missions.html" class="block px-4 py-2 hover:bg-red-800">Missions</a>
+                      <a href="cci-objectifs.html" class="block px-4 py-2 hover:bg-red-800">Objectifs</a>
+                      <a href="cci-membres.html" class="block px-4 py-2 hover:bg-red-800">Membres</a>
+                      <a href="cci-partenaires.html" class="block px-4 py-2 hover:bg-red-800">Partenaires</a>
+                      <a href="cci-bureau-executif.html" class="block px-4 py-2 hover:bg-red-800">Bureau Exécutif</a>
+                      <a href="activites.html" class="block px-4 py-2 hover:bg-red-800">Activités</a>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
 
-            <!-- Annuaire -->
-            <div class="relative">
-              <button
-                class="inline-flex items-center gap-1 font-medium hover:text-red-200 transition"
-                data-dropdown-toggle="dropdown-annuaire"
-              >
-                <span>Annuaire</span>
-                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-                </svg>
-              </button>
+                <!-- Annuaire -->
+                <div class="relative">
+                  <button
+                    class="inline-flex items-center gap-1 font-medium hover:text-red-200 transition"
+                    data-dropdown-toggle="dropdown-annuaire"
+                  >
+                    <span>Annuaire</span>
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+                    </svg>
+                  </button>
 
-              <!-- Menu déroulant -->
-              <div
-                id="dropdown-annuaire"
-                class="absolute right-0 mt-2 w-56 rounded-md bg-red-900/95 text-sm shadow-lg ring-1 ring-black/5 hidden z-20"
-              >
-                <div class="py-1">
-                  <a href="annuaire-hotels.html" class="block px-4 py-2 hover:bg-red-800">Hôtels</a>
-                  <a href="annuaire-restaurants.html" class="block px-4 py-2 hover:bg-red-800">Restaurants</a>
-                  <a href="annuaire-boites.html" class="block px-4 py-2 hover:bg-red-800">Boîtes de nuit</a>
-                  <a href="annuaire-espaces-balneaires.html" class="block px-4 py-2 hover:bg-red-800">Espaces balnéaires</a>
+                  <!-- Menu déroulant -->
+                  <div
+                    id="dropdown-annuaire"
+                    class="absolute right-0 mt-2 w-56 rounded-md bg-red-900/95 text-sm shadow-lg ring-1 ring-black/5 hidden z-20"
+                  >
+                    <div class="py-1">
+                      <a href="annuaire-hotels.html" class="block px-4 py-2 hover:bg-red-800">Hôtels</a>
+                      <a href="annuaire-restaurants.html" class="block px-4 py-2 hover:bg-red-800">Restaurants</a>
+                      <a href="annuaire-boites.html" class="block px-4 py-2 hover:bg-red-800">Boîtes de nuit</a>
+                      <a href="annuaire-espaces-balneaires.html" class="block px-4 py-2 hover:bg-red-800">Espaces balnéaires</a>
+                    </div>
+                  </div>
                 </div>
+
+                <!-- Agenda -->
+                <a href="agenda.html" class="font-medium hover:text-red-200 transition">
+                  Agenda
+                </a>
+
+                <!-- Bon plan -->
+                <a href="bon-plan.html" class="font-medium hover:text-red-200 transition">
+                  Bon Plan
+                </a>
+
+                <!-- Contact -->
+                <a href="contact.html" class="font-medium hover:text-red-200 transition">
+                  Contact
+                </a>
               </div>
+
+              <!-- Espace membre -->
+              <a
+                href="espace-membre.html"
+                class="inline-flex items-center justify-center rounded-full border border-red-300 px-4 py-2 text-sm font-semibold text-red-100 hover:bg-red-300 hover:text-red-900 transition mt-2 md:mt-0"
+              >
+                Espace membre
+              </a>
             </div>
-
-            <!-- Agenda -->
-            <a href="agenda.html" class="font-medium hover:text-red-200 transition">
-              Agenda
-            </a>
-
-            <!-- Bon plan -->
-            <a href="bon-plan.html" class="font-medium hover:text-red-200 transition">
-              Bon Plan
-            </a>
-
-            <!-- Contact -->
-            <a href="contact.html" class="font-medium hover:text-red-200 transition">
-              Contact
-            </a>
           </div>
-
-          <!-- Espace membre -->
-          <a
-            href="espace-membre.html"
-            class="inline-flex items-center justify-center rounded-full border border-red-300 px-4 py-2 text-sm font-semibold text-red-100 hover:bg-red-300 hover:text-red-900 transition mt-2 md:mt-0"
-          >
-            Espace membre
-          </a>
         </div>
-      </div>
-    </div>
-  </nav>
+      </nav>
+
+  </header>
 
   <!-- =================== SLIDER D'IMAGES PAYSAGE =================== -->
-  <section class="bg-gray-100">
-    <div class="w-full py-0 sm:py-0">
+    <section class="bg-gray-100 py-5">
+    <!-- Wrapper centré -->
+    <div class="max-w-7xl mx-auto py-0 sm:py-0">
       <div class="relative overflow-hidden shadow-md bg-gray-200">
+        
         <!-- Piste du slider -->
         <div id="hero-slider" class="flex transition-transform duration-700 ease-out">
+          
           <!-- Slide 1 -->
           <div class="min-w-full">
             <img
@@ -168,32 +179,31 @@
           </div>
         </div>
 
-        <!-- Puces de navigation -->
+        <!-- Puces -->
         <div class="pointer-events-none absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2">
           <button
             class="pointer-events-auto h-2.5 w-2.5 rounded-full bg-white/70 ring-1 ring-red-400"
             data-slider-dot="0"
-            aria-label="Image 1"
           ></button>
           <button
             class="pointer-events-auto h-2.5 w-2.5 rounded-full bg-white/40 ring-1 ring-red-400"
             data-slider-dot="1"
-            aria-label="Image 2"
           ></button>
           <button
             class="pointer-events-auto h-2.5 w-2.5 rounded-full bg-white/40 ring-1 ring-red-400"
             data-slider-dot="2"
-            aria-label="Image 3"
           ></button>
         </div>
       </div>
     </div>
   </section>
 
+
   <!-- =================== SECTION HERO / ACCUEIL =================== -->
-  <header class="hero-africa border-b bg-gradient-to-b from-white to-gray-100 py-8 sm:py-10">
+  <header class="hero-africa border-b bg-gradient-to-b from-white to-gray-100/80 py-8 sm:py-10">
+
     <div class="max-w-6xl mx-auto px-4">
-      <div class="grid gap-6 md:grid-cols-2 md:items-center">
+      <div class="text-center md:text-left max-w-xl mx-auto md:mx-0 bg-white/70 backdrop-blur-sm rounded-2xl p-5 sm:p-6 shadow-sm">
         <!-- Texte de présentation -->
         <div class="text-center md:text-left max-w-xl mx-auto md:mx-0">
           <h1 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight text-red-900 mb-3 sm:mb-4 leading-snug">
@@ -228,144 +238,147 @@
     </div>
   </header>
 
-  <!-- =================== SECTION : MISE EN AVANT DE L’ANNUAIRE =================== -->
-  <section class="py-8 sm:py-10">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-xl sm:text-2xl font-semibold text-gray-900 mb-5 sm:mb-6 text-center sm:text-left">
-        L’annuaire en un coup d’œil
-      </h2>
-
-      <div class="grid gap-4 sm:gap-6 md:grid-cols-4">
-        <!-- Carte Hôtels -->
-        <article class="group rounded-2xl bg-white p-4 sm:p-5 shadow-sm ring-1 ring-gray-200 hover:-translate-y-1 hover:shadow-lg transition">
-          <h3 class="mb-2 text-base sm:text-lg font-semibold text-gray-900 flex items-center gap-2">
-            <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-700 text-xl">
-              🏨
-            </span>
-            <span>Hôtels</span>
-          </h3>
-          <p class="mb-3 text-xs sm:text-sm text-gray-600">
-            Retrouvez les établissements hôteliers du Sud-Comoé,
-            leurs coordonnées et leurs services.
-          </p>
-          <a
-            href="annuaire-hotels.html"
-            class="inline-flex items-center text-xs sm:text-sm font-semibold text-red-700 group-hover:text-red-800"
-          >
-            Voir les hôtels
-            <span class="ml-1 text-xs">→</span>
-          </a>
-        </article>
-
-        <!-- Carte Restaurants -->
-        <article class="group rounded-2xl bg-white p-4 sm:p-5 shadow-sm ring-1 ring-gray-200 hover:-translate-y-1 hover:shadow-lg transition">
-          <h3 class="mb-2 text-base sm:text-lg font-semibold text-gray-900 flex items-center gap-2">
-            <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-700 text-xl">
-              🍽️
-            </span>
-            <span>Restaurants</span>
-          </h3>
-          <p class="mb-3 text-xs sm:text-sm text-gray-600">
-            Une sélection de restaurants pour découvrir les saveurs de la région.
-          </p>
-          <a
-            href="annuaire-restaurants.html"
-            class="inline-flex items-center text-xs sm:text-sm font-semibold text-red-700 group-hover:text-red-800"
-          >
-            Voir les restaurants
-            <span class="ml-1 text-xs">→</span>
-          </a>
-        </article>
-
-        <!-- Carte Boîtes de nuit -->
-        <article class="group rounded-2xl bg-white p-4 sm:p-5 shadow-sm ring-1 ring-gray-200 hover:-translate-y-1 hover:shadow-lg transition">
-          <h3 class="mb-2 text-base sm:text-lg font-semibold text-gray-900 flex items-center gap-2">
-            <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-700 text-xl">
-              🎶
-            </span>
-            <span>Boîtes de nuit</span>
-          </h3>
-          <p class="mb-3 text-xs sm:text-sm text-gray-600">
-            Les meilleurs espaces festifs et nocturnes de la région.
-          </p>
-          <a
-            href="annuaire-boites.html"
-            class="inline-flex items-center text-xs sm:text-sm font-semibold text-red-700 group-hover:text-red-800"
-          >
-            Voir les boîtes
-            <span class="ml-1 text-xs">→</span>
-          </a>
-        </article>
-
-        <!-- Carte Espaces balnéaires -->
-        <article class="group rounded-2xl bg-white p-4 sm:p-5 shadow-sm ring-1 ring-gray-200 hover:-translate-y-1 hover:shadow-lg transition">
-          <h3 class="mb-2 text-base sm:text-lg font-semibold text-gray-900 flex items-center gap-2">
-            <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-700 text-xl">
-              🌊
-            </span>
-            <span>Espaces balnéaires</span>
-          </h3>
-          <p class="mb-3 text-xs sm:text-sm text-gray-600">
-            Plages, lagunes, complexes balnéaires pour le tourisme et la détente.
-          </p>
-          <a
-            href="annuaire-espaces-balneaires.html"
-            class="inline-flex items-center text-xs sm:text-sm font-semibold text-red-700 group-hover:text-red-800"
-          >
-            Voir les espaces
-            <span class="ml-1 text-xs">→</span>
-          </a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- =================== SECTION AGENDA & BON PLAN =================== -->
-  <section class="border-t bg-gray-50 py-8 sm:py-10">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="grid gap-8 md:grid-cols-2">
-        <!-- Agenda -->
-        <div class="text-center md:text-left">
-          <h2 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2 flex items-center justify-center md:justify-start gap-2">
-            <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-700 text-lg">
-              📅
-            </span>
-            <span>Agenda</span>
+  <main>
+    
+      <!-- =================== SECTION : MISE EN AVANT DE L’ANNUAIRE =================== -->
+      <section class="py-8 sm:py-10">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-xl sm:text-2xl font-semibold text-gray-900 mb-5 sm:mb-6 text-center sm:text-left">
+            L’annuaire en un coup d’œil
           </h2>
-          <p class="text-xs sm:text-sm text-gray-700 mb-3">
-            Consultez les <strong>événements culturels</strong> et les
-            <strong>rendez-vous économiques</strong> du Sud-Comoé.
-          </p>
-          <a
-            href="agenda.html"
-            class="inline-flex items-center rounded-full border border-red-600 px-5 py-2 text-xs font-semibold text-red-700 hover:bg-red-50 transition w-full sm:w-auto justify-center"
-          >
-            Voir l’agenda
-          </a>
-        </div>
 
-        <!-- Bon plan -->
-        <div class="text-center md:text-left">
-          <h2 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2 flex items-center justify-center md:justify-start gap-2">
-            <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-700 text-lg">
-              💡
-            </span>
-            <span>Bon plan</span>
-          </h2>
-          <p class="text-xs sm:text-sm text-gray-700 mb-3">
-            Les membres disposant d’un compte peuvent publier directement leurs
-            <strong>offres spéciales, promotions, annonces</strong>.
-          </p>
-          <a
-            href="bon-plan.html"
-            class="inline-flex items-center rounded-full border border-red-600 px-5 py-2 text-xs font-semibold text-red-700 hover:bg-red-50 transition w-full sm:w-auto justify-center"
-          >
-            Voir les bons plans
-          </a>
+          <div class="grid gap-4 sm:gap-6 md:grid-cols-4">
+            <!-- Carte Hôtels -->
+            <article class="group rounded-2xl bg-gradient-to-b from-white to-gray-50 p-4 sm:p-5 shadow-sm ring-1 ring-gray-200 hover:-translate-y-1.5 hover:shadow-xl hover:ring-red-200 transition">
+              <h3 class="mb-2 text-base sm:text-lg font-semibold text-gray-900 flex items-center gap-2">
+                <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-700 text-xl">
+                  🏨
+                </span>
+                <span>Hôtels</span>
+              </h3>
+              <p class="mb-3 text-xs sm:text-sm text-gray-600">
+                Retrouvez les établissements hôteliers du Sud-Comoé,
+                leurs coordonnées et leurs services.
+              </p>
+              <a
+                href="annuaire-hotels.html"
+                class="inline-flex items-center text-xs sm:text-sm font-semibold text-red-700 group-hover:text-red-800"
+              >
+                Voir les hôtels
+                <span class="ml-1 text-xs">→</span>
+              </a>
+            </article>
+
+            <!-- Carte Restaurants -->
+            <article class="group rounded-2xl bg-gradient-to-b from-white to-gray-50 p-4 sm:p-5 shadow-sm ring-1 ring-gray-200 hover:-translate-y-1.5 hover:shadow-xl hover:ring-red-200 transition">
+              <h3 class="mb-2 text-base sm:text-lg font-semibold text-gray-900 flex items-center gap-2">
+                <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-700 text-xl">
+                  🍽️
+                </span>
+                <span>Restaurants</span>
+              </h3>
+              <p class="mb-3 text-xs sm:text-sm text-gray-600">
+                Une sélection de restaurants pour découvrir les saveurs de la région.
+              </p>
+              <a
+                href="annuaire-restaurants.html"
+                class="inline-flex items-center text-xs sm:text-sm font-semibold text-red-700 group-hover:text-red-800"
+              >
+                Voir les restaurants
+                <span class="ml-1 text-xs">→</span>
+              </a>
+            </article>
+
+            <!-- Carte Boîtes de nuit -->
+            <article class="group rounded-2xl bg-gradient-to-b from-white to-gray-50 p-4 sm:p-5 shadow-sm ring-1 ring-gray-200 hover:-translate-y-1.5 hover:shadow-xl hover:ring-red-200 transition">
+              <h3 class="mb-2 text-base sm:text-lg font-semibold text-gray-900 flex items-center gap-2">
+                <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-700 text-xl">
+                  🎶
+                </span>
+                <span>Boîtes de nuit</span>
+              </h3>
+              <p class="mb-3 text-xs sm:text-sm text-gray-600">
+                Les meilleurs espaces festifs et nocturnes de la région.
+              </p>
+              <a
+                href="annuaire-boites.html"
+                class="inline-flex items-center text-xs sm:text-sm font-semibold text-red-700 group-hover:text-red-800"
+              >
+                Voir les boîtes
+                <span class="ml-1 text-xs">→</span>
+              </a>
+            </article>
+
+            <!-- Carte Espaces balnéaires -->
+            <article class="group rounded-2xl bg-gradient-to-b from-white to-gray-50 p-4 sm:p-5 shadow-sm ring-1 ring-gray-200 hover:-translate-y-1.5 hover:shadow-xl hover:ring-red-200 transition">
+              <h3 class="mb-2 text-base sm:text-lg font-semibold text-gray-900 flex items-center gap-2">
+                <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-700 text-xl">
+                  🌊
+                </span>
+                <span>Espaces balnéaires</span>
+              </h3>
+              <p class="mb-3 text-xs sm:text-sm text-gray-600">
+                Plages, lagunes, complexes balnéaires pour le tourisme et la détente.
+              </p>
+              <a
+                href="annuaire-espaces-balneaires.html"
+                class="inline-flex items-center text-xs sm:text-sm font-semibold text-red-700 group-hover:text-red-800"
+              >
+                Voir les espaces
+                <span class="ml-1 text-xs">→</span>
+              </a>
+            </article>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
+
+      <!-- =================== SECTION AGENDA & BON PLAN =================== -->
+      <section class="border-t bg-gradient-to-r from-gray-50 via-white to-gray-100 py-8 sm:py-10">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="grid gap-8 md:grid-cols-2">
+            <!-- Agenda -->
+            <div class="text-center md:text-left bg-white/80 rounded-2xl p-5 shadow-sm ring-1 ring-gray-100">
+              <h2 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2 flex items-center justify-center md:justify-start gap-2">
+                <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-700 text-lg">
+                  📅
+                </span>
+                <span>Agenda</span>
+              </h2>
+              <p class="text-xs sm:text-sm text-gray-700 mb-3">
+                Consultez les <strong>événements culturels</strong> et les
+                <strong>rendez-vous économiques</strong> du Sud-Comoé.
+              </p>
+              <a
+                href="agenda.html"
+                class="inline-flex items-center rounded-full border border-red-600 px-5 py-2 text-xs font-semibold text-red-700 hover:bg-red-50 transition w-full sm:w-auto justify-center"
+              >
+                Voir l’agenda
+              </a>
+            </div>
+
+            <!-- Bon plan -->
+            <div class="text-center md:text-left bg-white/80 rounded-2xl p-5 shadow-sm ring-1 ring-gray-100">
+              <h2 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2 flex items-center justify-center md:justify-start gap-2">
+                <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-700 text-lg">
+                  💡
+                </span>
+                <span>Bon plan</span>
+              </h2>
+              <p class="text-xs sm:text-sm text-gray-700 mb-3">
+                Les membres disposant d’un compte peuvent publier directement leurs
+                <strong>offres spéciales, promotions, annonces</strong>.
+              </p>
+              <a
+                href="bon-plan.html"
+                class="inline-flex items-center rounded-full border border-red-600 px-5 py-2 text-xs font-semibold text-red-700 hover:bg-red-50 transition w-full sm:w-auto justify-center"
+              >
+                Voir les bons plans
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+  </main>
 
     <!-- =================== PIED DE PAGE ===================
        Footer institutionnel / Chambre de Commerce
@@ -374,7 +387,8 @@
        - Colonne 3 : informations pratiques
        - Colonne 4 : contact & réseaux
   ======================================================= -->
-   <footer class="bg-gray-900 text-gray-300 pt-12 pb-5 mt-8">
+   <footer class="bg-gray-900/95 text-gray-300 pt-12 pb-5 mt-8">
+
     <div class="max-w-6xl mx-auto px-4 space-y-10">
 
       <div class="grid gap-10 md:grid-cols-4">
