@@ -1,0 +1,524 @@
+<!--
+  FICHIER : annuaire-hotels.html
+  OBJET   : Annuaire des hôtels du Sud-Comoé
+  STYLE   : Tailwind CSS – même thème que la page d’accueil
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Annuaire des hôtels - Sud-Comoé</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Ton style perso (optionnel) -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-gradient-to-b from-gray-50 via-white to-gray-100 text-gray-900 antialiased overflow-x-hidden">
+
+  <!-- =================== HEADER / NAVBAR =================== -->
+  <header>
+    <nav class="bg-red-900/95 backdrop-blur border-b border-red-800 text-white shadow-lg sticky top-0 z-40">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex items-center justify-between h-14 sm:h-16">
+          <!-- Logo + titre -->
+          <a href="index.html" class="flex items-center gap-2 font-semibold tracking-wide text-sm sm:text-base hover:opacity-90 transition">
+            <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-600 text-xs font-bold sm:text-sm">
+              CCI
+            </span>
+            <span class="whitespace-nowrap">CCI-SUD COMOE</span>
+          </a>
+
+          <!-- Bouton burger (mobile) -->
+          <button
+            id="nav-toggle"
+            class="inline-flex items-center justify-center rounded-md p-2 text-gray-200 hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-400 md:hidden"
+            aria-label="Ouvrir le menu"
+          >
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+
+          <!-- Menu principal -->
+          <div
+            id="nav-menu"
+            class="hidden w-full flex-col gap-4 pt-4 pb-4 md:flex md:w-auto md:flex-row md:items-center md:gap-6 md:pt-0 md:pb-0"
+          >
+            <div class="flex flex-col gap-3 md:flex-row md:items-center md:gap-4 text-sm">
+              <!-- La CCI -->
+              <div class="relative">
+                <button
+                  class="inline-flex items-center gap-1 font-medium hover:text-red-200 transition"
+                  data-dropdown-toggle="dropdown-cci"
+                >
+                  <span>La CCI</span>
+                  <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+
+                <div
+                  id="dropdown-cci"
+                  class="absolute right-0 mt-2 w-52 rounded-md bg-red-900/95 text-sm shadow-lg ring-1 ring-black/5 hidden z-20"
+                >
+                  <div class="py-1">
+                    <a href="cci-mot-president.html" class="block px-4 py-2 hover:bg-red-800">Mot du Président</a>
+                    <a href="cci-missions.html" class="block px-4 py-2 hover:bg-red-800">Missions</a>
+                    <a href="cci-objectifs.html" class="block px-4 py-2 hover:bg-red-800">Objectifs</a>
+                    <a href="cci-membres.html" class="block px-4 py-2 hover:bg-red-800">Membres</a>
+                    <a href="cci-partenaires.html" class="block px-4 py-2 hover:bg-red-800">Partenaires</a>
+                    <a href="cci-bureau-executif.html" class="block px-4 py-2 hover:bg-red-800">Bureau Exécutif</a>
+                    <a href="activites.html" class="block px-4 py-2 hover:bg-red-800">Activités</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Annuaire -->
+              <div class="relative">
+                <button
+                  class="inline-flex items-center gap-1 font-medium hover:text-red-200 transition"
+                  data-dropdown-toggle="dropdown-annuaire"
+                >
+                  <span>Annuaire</span>
+                  <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+
+                <div
+                  id="dropdown-annuaire"
+                  class="absolute right-0 mt-2 w-56 rounded-md bg-red-900/95 text-sm shadow-lg ring-1 ring-black/5 hidden z-20"
+                >
+                  <div class="py-1">
+                    <a href="annuaire-hotels.html" class="block px-4 py-2 hover:bg-red-800">Hôtels</a>
+                    <a href="annuaire-restaurants.html" class="block px-4 py-2 hover:bg-red-800">Restaurants</a>
+                    <a href="annuaire-boites.html" class="block px-4 py-2 hover:bg-red-800">Boîtes de nuit</a>
+                    <a href="annuaire-espaces-balneaires.html" class="block px-4 py-2 hover:bg-red-800">Espaces balnéaires</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Liens simples -->
+              <a href="agenda.html" class="font-medium hover:text-red-200 transition">Agenda</a>
+              <a href="bon-plan.html" class="font-medium hover:text-red-200 transition">Bon Plan</a>
+              <a href="contact.html" class="font-medium hover:text-red-200 transition">Contact</a>
+            </div>
+
+            <!-- Espace membre -->
+            <a
+              href="espace-membre.html"
+              class="inline-flex items-center justify-center rounded-full border border-red-300 px-4 py-2 text-sm font-semibold text-red-100 hover:bg-red-300 hover:text-red-900 transition mt-2 md:mt-0"
+            >
+              Espace membre
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =================== CONTENU PRINCIPAL =================== -->
+  <main class="max-w-6xl mx-auto px-4 py-8 sm:py-10 space-y-8">
+
+    <!-- ========== ENTÊTE DE LA PAGE HÔTELS ========== -->
+    <section class="space-y-3">
+      <!-- Fil d’Ariane (breadcrumb) -->
+      <nav class="text-xs sm:text-sm text-gray-500">
+        <a href="index.html" class="hover:text-red-600">Accueil</a>
+        <span class="mx-1">›</span>
+        <span class="font-medium text-gray-700">Annuaire des hôtels</span>
+      </nav>
+
+      <!-- Titre + texte d’intro -->
+      <header class="space-y-2">
+        <h1 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight text-red-900">
+          Annuaire des hôtels du Sud-Comoé
+        </h1>
+        <p class="text-sm sm:text-base text-gray-700 leading-relaxed max-w-2xl">
+          Consultez la liste des établissements hôteliers de la région du Sud-Comoé :
+          coordonnées, localisation, capacités d’hébergement et services proposés.
+        </p>
+      </header>
+    </section>
+
+    <!-- ========== ZONE DE RECHERCHE & FILTRES ========== -->
+    <section class="bg-white/90 rounded-2xl shadow-sm ring-1 ring-gray-200 p-4 sm:p-5 space-y-4">
+      <h2 class="text-sm sm:text-base font-semibold text-gray-900">
+        Rechercher un hôtel
+      </h2>
+
+      <div class="grid gap-3 sm:grid-cols-2 md:grid-cols-4">
+        <!-- Champ de recherche texte -->
+        <div class="space-y-1">
+          <label for="search-name" class="block text-xs font-medium text-gray-600">
+            Nom de l'hôtel
+          </label>
+          <input
+            id="search-name"
+            type="text"
+            placeholder="Ex : Hôtel du Lac"
+            class="w-full rounded-full border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
+          />
+        </div>
+
+        <!-- Localité -->
+        <div class="space-y-1">
+          <label for="filter-city" class="block text-xs font-medium text-gray-600">
+            Localité
+          </label>
+          <select
+            id="filter-city"
+            class="w-full rounded-full border border-gray-300 px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
+          >
+            <option value="">Toutes les localités</option>
+            <option>Abengourou</option>
+            <option>Aboisso</option>
+            <option>Adiaké</option>
+            <option>Assinie</option>
+            <option>Grand-Bassam</option>
+          </select>
+        </div>
+
+        <!-- Gamme / catégorie -->
+        <div class="space-y-1">
+          <label for="filter-range" class="block text-xs font-medium text-gray-600">
+            Gamme
+          </label>
+          <select
+            id="filter-range"
+            class="w-full rounded-full border border-gray-300 px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
+          >
+            <option value="">Toutes les gammes</option>
+            <option>Économique</option>
+            <option>Standard</option>
+            <option>Confort</option>
+            <option>Haut de gamme</option>
+          </select>
+        </div>
+
+        <!-- Services clés -->
+        <div class="space-y-1">
+          <label for="filter-service" class="block text-xs font-medium text-gray-600">
+            Service principal
+          </label>
+          <select
+            id="filter-service"
+            class="w-full rounded-full border border-gray-300 px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
+          >
+            <option value="">Tous les services</option>
+            <option>Restaurant</option>
+            <option>Piscine</option>
+            <option>Salle de réunion</option>
+            <option>Proximité plage</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Boutons d’action (placeholder pour futur JS) -->
+      <div class="flex flex-wrap gap-3 justify-end pt-1">
+        <button
+          type="button"
+          class="inline-flex items-center justify-center rounded-full border border-gray-300 px-4 py-2 text-xs sm:text-sm font-medium text-gray-700 hover:bg-gray-100 transition"
+        >
+          Réinitialiser
+        </button>
+        <button
+          type="button"
+          class="inline-flex items-center justify-center rounded-full bg-red-600 px-5 py-2 text-xs sm:text-sm font-semibold text-white hover:bg-red-700 shadow-md transition"
+        >
+          Appliquer les filtres
+        </button>
+      </div>
+    </section>
+
+    <!-- ========== LISTE DES HÔTELS ========== -->
+    <section class="space-y-4">
+      <!-- Résumé / compteur (statique pour l’instant) -->
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs sm:text-sm text-gray-600">
+        <p><span class="font-semibold text-gray-800">8 hôtels</span> répertoriés dans le Sud-Comoé.</p>
+        <p>Les informations sont fournies à titre indicatif par les établissements.</p>
+      </div>
+
+      <!-- Grille des cartes d’hôtels -->
+      <div class="space-y-4">
+
+        <!-- Carte hôtel 1 -->
+        <article class="group rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 hover:shadow-lg hover:-translate-y-1 hover:ring-red-200 transition">
+          <div class="flex flex-col md:flex-row gap-4 p-4 sm:p-5">
+
+            <!-- Image (placeholder, tu peux mettre une vraie photo) -->
+            <div class="md:w-40 h-32 md:h-28 rounded-xl bg-gray-200 overflow-hidden">
+              <img
+                src="ch4.jpg"
+                alt="Hôtel du Lac - façade"
+                class="h-full w-full object-cover"
+              />
+            </div>
+
+            <!-- Infos principales -->
+            <div class="flex-1 space-y-2">
+              <header class="flex flex-wrap items-center justify-between gap-2">
+                <div>
+                  <h2 class="text-base sm:text-lg font-semibold text-gray-900">
+                    Hôtel du Lac
+                  </h2>
+                  <p class="text-xs sm:text-sm text-gray-600">
+                    <span class="font-medium text-gray-800">Grand-Bassam</span> · Bord de lagune
+                  </p>
+                </div>
+                <div class="text-right text-xs sm:text-sm text-gray-600">
+                  <p class="font-semibold text-red-700">À partir de 35 000 FCFA / nuit</p>
+                  <p>Gamme : Confort</p>
+                </div>
+              </header>
+
+              <!-- Services clés -->
+              <ul class="flex flex-wrap gap-2 text-[11px] sm:text-xs text-gray-700">
+                <li class="inline-flex items-center rounded-full bg-red-50 px-2.5 py-1 text-red-700">Restaurant</li>
+                <li class="inline-flex items-center rounded-full bg-red-50 px-2.5 py-1 text-red-700">Piscine</li>
+                <li class="inline-flex items-center rounded-full bg-red-50 px-2.5 py-1 text-red-700">Salle de réunion</li>
+                <li class="inline-flex items-center rounded-full bg-red-50 px-2.5 py-1 text-red-700">Wi-Fi</li>
+              </ul>
+
+              <!-- Coordonnées + action -->
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pt-1 text-xs sm:text-sm">
+                <div class="space-y-1 text-gray-600">
+                  <p>☎ <span class="font-medium text-gray-800">(+225) 07 00 00 00 00</span></p>
+                  <p>✉ <span class="font-medium text-gray-800">contact@hotel-du-lac.ci</span></p>
+                </div>
+                <div class="flex gap-2 justify-start sm:justify-end">
+                  <a
+                    href="#"
+                    class="inline-flex items-center rounded-full border border-red-600 px-4 py-1.5 text-xs font-semibold text-red-700 hover:bg-red-50 transition"
+                  >
+                    Voir la fiche détail
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Carte hôtel 2 -->
+        <article class="group rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 hover:shadow-lg hover:-translate-y-1 hover:ring-red-200 transition">
+          <div class="flex flex-col md:flex-row gap-4 p-4 sm:p-5">
+            <div class="md:w-40 h-32 md:h-28 rounded-xl bg-gray-200 overflow-hidden">
+              <img
+                src="h_maison_akoula.jpg"
+                alt="Résidence Balnéaire Assinie"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="flex-1 space-y-2">
+              <header class="flex flex-wrap items-center justify-between gap-2">
+                <div>
+                  <h2 class="text-base sm:text-lg font-semibold text-gray-900">
+                    Résidence Balnéaire Assinie
+                  </h2>
+                  <p class="text-xs sm:text-sm text-gray-600">
+                    <span class="font-medium text-gray-800">Assinie</span> · Proximité plage
+                  </p>
+                </div>
+                <div class="text-right text-xs sm:text-sm text-gray-600">
+                  <p class="font-semibold text-red-700">À partir de 50 000 FCFA / nuit</p>
+                  <p>Gamme : Haut de gamme</p>
+                </div>
+              </header>
+
+              <ul class="flex flex-wrap gap-2 text-[11px] sm:text-xs text-gray-700">
+                <li class="inline-flex items-center rounded-full bg-red-50 px-2.5 py-1 text-red-700">Vue mer</li>
+                <li class="inline-flex items-center rounded-full bg-red-50 px-2.5 py-1 text-red-700">Piscine</li>
+                <li class="inline-flex items-center rounded-full bg-red-50 px-2.5 py-1 text-red-700">Restaurant</li>
+                <li class="inline-flex items-center rounded-full bg-red-50 px-2.5 py-1 text-red-700">Parking sécurisé</li>
+              </ul>
+
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pt-1 text-xs sm:text-sm">
+                <div class="space-y-1 text-gray-600">
+                  <p>☎ <span class="font-medium text-gray-800">(+225) 05 00 00 00 00</span></p>
+                  <p>✉ <span class="font-medium text-gray-800">info@residence-assinie.ci</span></p>
+                </div>
+                <div class="flex gap-2 justify-start sm:justify-end">
+                  <a
+                    href="#"
+                    class="inline-flex items-center rounded-full border border-red-600 px-4 py-1.5 text-xs font-semibold text-red-700 hover:bg-red-50 transition"
+                  >
+                    Voir la fiche détail
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tu peux dupliquer ces cartes pour ajouter d'autres hôtels -->
+        <!-- … -->
+
+      </div>
+
+      <!-- Pagination (statique pour l’instant) -->
+      <div class="flex justify-center pt-4">
+        <nav class="inline-flex items-center gap-1 text-xs sm:text-sm">
+          <button class="px-3 py-1 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100 transition">
+            Précédent
+          </button>
+          <button class="px-3 py-1 rounded-full bg-red-600 text-white font-semibold">
+            1
+          </button>
+          <button class="px-3 py-1 rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100 transition">
+            2
+          </button>
+          <button class="px-3 py-1 rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100 transition">
+            3
+          </button>
+          <button class="px-3 py-1 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100 transition">
+            Suivant
+          </button>
+        </nav>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =================== PIED DE PAGE =================== -->
+  <footer class="bg-gray-900/95 text-gray-300 pt-12 pb-5 mt-8">
+    <div class="max-w-6xl mx-auto px-4 space-y-10">
+
+      <!-- 4 colonnes -->
+      <div class="grid gap-10 md:grid-cols-4">
+        <!-- Colonne 1 -->
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-xs font-bold">
+              CCI
+            </span>
+            <div class="text-base">
+              <div class="font-semibold text-white">CCI-SUD COMOE</div>
+              <div class="text-gray-400 text-sm">Délégation Régionale</div>
+            </div>
+          </div>
+          <p class="text-[15px] leading-relaxed text-gray-400">
+            Plateforme officielle de l’Annuaire Numérique des
+            <span class="text-gray-200 font-medium">Hôtels &amp; Restaurants du Sud-Comoé</span>,
+            pour valoriser les acteurs du tourisme et faciliter la mise en relation.
+          </p>
+        </div>
+
+        <!-- Colonne 2 -->
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">Navigation</h3>
+          <ul class="space-y-3 text-[15px]">
+            <li><a href="index.html" class="hover:text-red-400 transition">Accueil</a></li>
+            <li><a href="annuaire-hotels.html" class="hover:text-red-400 transition">Annuaire des hôtels</a></li>
+            <li><a href="annuaire-restaurants.html" class="hover:text-red-400 transition">Annuaire des restaurants</a></li>
+            <li><a href="agenda.html" class="hover:text-red-400 transition">Agenda des événements</a></li>
+            <li><a href="bon-plan.html" class="hover:text-red-400 transition">Bons plans &amp; offres</a></li>
+            <li><a href="contact.html" class="hover:text-red-400 transition">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne 3 -->
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">Informations pratiques</h3>
+          <ul class="space-y-3 text-[15px] text-gray-400">
+            <li>
+              📍 <span class="font-medium text-gray-200">Sud-Comoé, Côte d’Ivoire</span><br>
+              <span class="block pl-6">
+                Délégation Régionale de la Chambre de Commerce et d’Industrie
+              </span>
+            </li>
+            <li>
+              🕒 <span class="font-medium text-gray-200">Horaires d’ouverture</span><br>
+              <span class="block pl-6">
+                Lundi – Vendredi : 8h00 – 17h00
+              </span>
+            </li>
+            <li>
+              ℹ️ <span class="font-medium text-gray-200">Services :</span><br>
+              <span class="block pl-6">
+                Appui aux entreprises, information économique, promotion du tourisme.
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Colonne 4 -->
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">Contact &amp; suivi</h3>
+          <ul class="space-y-3 text-[15px] text-gray-400 mb-5">
+            <li>☎ Téléphone : <span class="text-gray-200 font-medium">(+225) XX XX XX XX</span></li>
+            <li>✉ Email : <span class="text-gray-200 font-medium">contact@cci-sud-comoe.ci</span></li>
+          </ul>
+
+          <p class="text-[15px] text-gray-400 mb-3">
+            Suivez l’actualité de la CCI-SUD COMOE :
+          </p>
+          <div class="flex items-center gap-3">
+            <a href="#" class="inline-flex h-8 px-4 items-center justify-center rounded-full bg-gray-800 text-[13px] font-semibold hover:bg-red-600 hover:text-white transition">
+              Facebook
+            </a>
+            <a href="#" class="inline-flex h-8 px-4 items-center justify-center rounded-full bg-gray-800 text-[13px] font-semibold hover:bg-red-600 hover:text-white transition">
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bas de page -->
+      <div class="border-t border-gray-800 pt-4 flex flex-col gap-2 text-[13px] sm:flex-row sm:items-center sm:justify-between">
+        <div class="text-center sm:text-left">
+          &copy; <span id="year"></span> CCI-SUD COMOE – Tous droits réservés.
+        </div>
+        <div class="text-center sm:text-right text-gray-400">
+          <span class="text-gray-200">Annuaire Numérique des Hôtels &amp; Restaurants du Sud-Comoé</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =================== SCRIPTS =================== -->
+  <script>
+    // Met à jour l’année du footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Menu burger
+    const navToggle = document.getElementById("nav-toggle");
+    const navMenu = document.getElementById("nav-menu");
+
+    if (navToggle && navMenu) {
+      navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("hidden");
+      });
+    }
+
+    // Menus déroulants (La CCI / Annuaire)
+    const dropdownButtons = document.querySelectorAll("[data-dropdown-toggle]");
+
+    dropdownButtons.forEach((btn) => {
+      const menuId = btn.getAttribute("data-dropdown-toggle");
+      const menu = document.getElementById(menuId);
+      if (!menu) return;
+
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        menu.classList.toggle("hidden");
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!menu.contains(e.target) && !btn.contains(e.target)) {
+          menu.classList.add("hidden");
+        }
+      });
+    });
+
+    // NOTE : pour l’instant, les filtres ne sont qu’interface.
+    // Tu pourras plus tard les connecter à une vraie base (JSON / API / base de données).
+  </script>
+</body>
+</html>
